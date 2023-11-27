@@ -11,10 +11,11 @@ int main()
 
     while(ss >> word)
     {
-        for(int i = strlen(word)-1; i>=0; i--)
+        for(int i = 0 , j=strlen(word-1);  i<j; i++, j--)
         {
-            cout << i;
+            swap(word[i],word[j]);
         }
+        cout << word;
     }
 
     return 0;
